@@ -1,5 +1,7 @@
 package datastructures.linkedlist;
 
+import java.util.HashSet;
+
 public class LinkedList {
 
     private Node head;
@@ -90,7 +92,24 @@ public class LinkedList {
 
         return slow;
     }
+    public void removeDuplicates() {
+        HashSet<Integer> set = new HashSet<>();
 
+        Node current = head;
+        Node prev = null;
+
+        while (current != null) {
+            if (set.contains(current.value)) {
+                prev.next = current.next;
+            } else {
+                set.add(current.value);
+                prev = current;
+            }
+            current = current.next;
+        }
+
+        tail = prev;
+    }
 }
 
 

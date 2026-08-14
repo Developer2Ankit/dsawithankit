@@ -106,7 +106,18 @@ public class Main {
             Expected: 3
             Actual: 3
         */
-
+        // Test 7: Mixed duplicates throughout
+        System.out.println("Test 7: Mixed Duplicates");
+        myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
+        myLinkedList.append(1);
+        myLinkedList.append(3);
+        myLinkedList.append(2);
+        myLinkedList.append(4);
+        myLinkedList.removeDuplicates();
+        System.out.println("Expected: 1 -> 2 -> 3 -> 4");
+        myLinkedList.printList();
+        System.out.println();
     }
 
 
