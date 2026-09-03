@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
-   private String name;
-   private String department;
-   private int salary;
-   private int age;
-    public Employee(){
-super();
+    private String name;
+    private String department;
+    private int salary;
+    private int age;
+
+    public Employee() {
+        super();
     }
 
     @Override
@@ -31,14 +32,21 @@ super();
     }
 
     public List<Employee> getEmployees() {
-       List<Employee> employees = new ArrayList<>();
+        List<Employee> employees = new ArrayList<>();
 
-       employees.add(new Employee("Ankit", "IT", 120000, 32));
-       employees.add(new Employee("Rahul", "HR", 80000, 30));
-       employees.add(new Employee("Amit", "IT", 150000, 35));
-       employees.add(new Employee("Pankaj", "Finance", 130000, 29));
-       employees.add(new Employee("Rohit", "IT", 90000, 27));
-   return employees;
+        employees.add(new Employee("Ankit", "IT", 120000, 32));
+        employees.add(new Employee("Rahul", "HR", 80000, 30));
+        employees.add(new Employee("Amit", "IT", 150000, 35));
+        employees.add(new Employee("Pankaj", "Finance", 130000, 29));
+        employees.add(new Employee("Saurabh", "Finance", 150000, 31));
+        employees.add(new Employee("Rohit", "IT", 90000, 27));
+        employees.add(new Employee("Keshav", "CSE", 210000, 27));
+        employees.add(new Employee("Narayan", "CSE", 310000, 31));
+        employees.add(new Employee("Madhav", "IT", 500000, 27));
+        employees.add(new Employee("Madhav", "CSE", 550000, 34));
+
+
+        return employees;
     }
 
     public String getName() {
